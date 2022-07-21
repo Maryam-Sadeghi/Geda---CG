@@ -1,0 +1,75 @@
+;
+
+[ moleculetype ]
+M00     1
+
+[ atoms ]
+; nr type   resnr residue atom   cgnr   charge     mass
+   1 SQ1     1     M00     Xx      1    0.000    45.08298  ;Tertiary amin-protonated-charged
+   2 SC3     1     M00     Yy      2    0.000    41.07130  ;Cyclic alkane ring1
+   3 TC3     1     M00     Yy      3    0.000    28.05276  ;Cyclic alkane ring1
+   4 SP3a    1     M00     Zz      4    0.000    40.02040  ;Tertiary amide
+   5 TC5v    1     M00     Tt      5    0.000    25.02924  ;benzene ring2
+   6 TC5e    1     M00     Tt      6    0.000    25.02924  ;benzene ring2
+   7 TC5     1     M00     Tt      7    0.000    26.03708  ;benzene ring2
+   8 P4      1     M00     Aa      8    0.000    58.03878  ;Urea
+   9 TC5e    1     M00     Tt      9    0.000    25.02924  ;benzene ring3
+  10 TC5     1     M00     Tt     10    0.000    25.02924  ;benzene ring3
+  11 TC5     1     M00     Tt     11    0.000    26.03708  ;benzene ring3
+  12 TN1a    1     M00     Jj     12    0.000    26.01740  ;triazine ring4
+  13 TN1a    1     M00     Jj     13    0.000    26.01740  ;triazine ring4
+  14 TN1a    1     M00     Jj     14    0.000    26.01740  ;triazine ring4
+  15 SN2     1     M00     Bb     15    0.000    42.05946  ;Cyclic alkane -N ring4
+  16 SN2     1     M00     Bb     16    0.000    44.05176  ;Cyclic alkane -O ring4
+  17 SN2     1     M00     Bb     17    0.000    42.05946  ;Cyclic alkane -N ring4
+  18 SN2     1     M00     Bb     18    0.000    44.05176  ;Cyclic alkane -O ring4
+
+[ bonds ]
+;  ai	aj funct	b0	kb
+   1    2    1      0.34107  12551.98783  ;SQ1-SC3
+   2    4    1      0.32254  42272.49707  ;SC3-SP3a
+   3    4    1      0.27011  28695.66423  ;TC3-SP3a
+   6    8    1      0.29280  16631.81914  ;TC5e-P4
+   8    9    1      0.29380  16496.30991  ;P4-TC5e
+  10   12    1      0.21769  99807.77118  ;TC5-TN1a
+  13   15    1      0.23579  33516.78284  ;TN1a-SN2
+  14   17    1      0.23559  33223.71955  ;TN1a-SN2
+
+[ angles ]
+; ai 	aj  ak	funct	 theta	    ktheta
+   1    2    3    2     73.07472    243.52987  ;SQ1-SC3-TC3
+   1    2    4    2    122.37741    189.12379  ;SQ1-SC3-SP3a
+   2    4    5    2     89.89834     38.92332  ;SC3-SP3a-TC5v
+   3    4    5    2    140.96200     67.60240  ;TC3-SP3a-TC5v
+   4    5    6    2    152.53637   7146.08783  ;SP3a-TC5v-TC5e
+   4    5    7    2     84.67560   1996.94679  ;SP3a-TC5v-TC5
+   5    6    8    2    155.58704   1514.87586  ;TC5v-TC5e-P4
+   7    6    8    2     89.21295    267.85746  ;TC5-TC5e-P4
+   6    8    9    2    148.26058     94.27795  ;TC5e-P4-TC5e
+   8    9   10    2    156.26560   1528.67759  ;P4-TC5e-TC5
+   8    9   11    2     89.54797    257.33620  ;P4-TC5e-TC5
+   9   10   12    2    164.08586  15407.80706  ;TC5e-TC5-TN1a
+  11   10   12    2     97.10870   2101.46038  ;TC5-TC5-TN1a
+  10   12   13    2    165.08614  10027.65692  ;TC5-TN1a-TN1a
+  10   12   14    2    132.13752   1712.34734  ;TC5-TN1a-TN1a
+  12   13   15    2    103.42490    842.71398  ;TN1a-TN1a-SN1
+  12   14   17    2    162.99857   6657.95679  ;TN1a-TN1a-SN1
+  13   14   17    2    101.69567    867.70766  ;TN1a-TN1a-SN1
+  14   13   15    2    161.08422   5319.46291  ;TN1a-TN1a-SN1
+  13   15   16    2    128.98137     57.01691  ;TN1a-SN1-SN1
+  14   17   18    2    129.26977     59.44848  ;TN1a-SN1-SN1
+
+[ constraints ]
+   2    3    1      0.27320  ;SC3-TC3
+   4    5    1      0.24542  ;SP3a-TC5v
+   5    6    1      0.22089  ;TC5v-TC5e
+   5    7    1      0.29931  ;TC5v-TC5
+   6    7    1      0.29900  ;TC5e-TC5
+   9   10    1      0.22113  ;TC5e-TC5
+   9   11    1      0.29903  ;TC5e-TC5
+  10   11    1      0.29999  ;TC5-TC5
+  12   13    1      0.20281  ;TN1a-TN1a
+  12   14    1      0.19957  ;TN1a-TN1a
+  13   14    1      0.19963  ;TN1a-TN1a
+  15   16    1      0.20813  ;SN1-SN1
+  17   18    1      0.20814  ;SN1-SN1

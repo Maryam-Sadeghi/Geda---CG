@@ -1,0 +1,17 @@
+;
+
+[ moleculetype ]
+M02     1
+
+[ atoms ]
+; nr type   resnr residue atom   cgnr charge     mass
+   1 SP2d    1     M02    Ll      1    0.000     57.02724 ;-COOH Carboxil 
+   2 TC4     1     M02    Ll      2    0.000     26.03708 ;-CC Alkene 
+   3 SQ2n    1     M02    Ll      3    0.000     44.0087  ;-COO charged
+
+[ angles ]
+   1    2    3    2     63.00000    293.19293  ;SP2d-TC4-SQ2n
+
+[ constraints ]
+   1    2    1      0.29704  ;SP2d-TC4
+   2    3    1      0.27122  ;TC4-SQ2n
